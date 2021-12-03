@@ -1,0 +1,22 @@
+[
+  {
+    "text": "Nombre del michi",
+    "value": "nombre"
+  },
+  {
+    "text": "Humano",
+    "value": "humano"
+  },
+  {
+    "text": "Edad",
+    "value": "edad"
+  },
+  {
+    "text": "Color",
+    "value": "color"
+  },
+  {
+    "text": "Se deja rascar la panza?",
+    "value": "panza"
+  }
+]

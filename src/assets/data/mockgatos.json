@@ -1,0 +1,30 @@
+[
+  {
+    "nombre": "Zelda",
+    "humano": "Fespi",
+    "edad": 5,
+    "color": "gris",
+    "panza": false
+  },
+  {
+    "nombre": "Minerva",
+    "humano": "Leo",
+    "edad": 3,
+    "color": "blanca y gris",
+    "panza": false
+  },
+  {
+    "nombre": "Lady",
+    "humano": "Amanda",
+    "edad": 6,
+    "color": "tricolor",
+    "panza": true
+  },
+  {
+    "nombre": "Pixel",
+    "humano": "Flor",
+    "edad": 4,
+    "color": "gris oscura",
+    "panza": true
+  }
+]
