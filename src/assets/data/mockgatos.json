@@ -4,27 +4,27 @@
     "humano": "Fespi",
     "edad": 5,
     "color": "gris",
-    "panza": false
+    "panza": "No"
   },
   {
     "nombre": "Minerva",
     "humano": "Leo",
     "edad": 3,
     "color": "blanca y gris",
-    "panza": false
+    "panza": "No"
   },
   {
     "nombre": "Lady",
     "humano": "Amanda",
     "edad": 6,
     "color": "tricolor",
-    "panza": true
+    "panza": "Sí"
   },
   {
     "nombre": "Pixel",
     "humano": "Flor",
     "edad": 4,
     "color": "gris oscura",
-    "panza": true
+    "panza": "Sí"
   }
 ]

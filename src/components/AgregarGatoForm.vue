@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1 class="page-guia">Registro</h1>    
 
     <v-form
       ref="form"
@@ -75,7 +74,7 @@
             v-model="panza"
             label="Sí"
             color="orange"
-            value=true
+            value="Sí"
             hide-details
             :rules="checkRules"
           ></v-checkbox>
@@ -83,7 +82,7 @@
             v-model="panza"
             label="No"
             color="orange darken-3"
-            value=false
+            value="No"
             :rules="checkRules"
           ></v-checkbox>
         </v-col>

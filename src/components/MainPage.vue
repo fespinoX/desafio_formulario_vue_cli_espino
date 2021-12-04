@@ -12,11 +12,11 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Vuecator 2000
+          {{ nombreApp | mayusculizar(nombreApp) }}
         </h1>
 
         <p class="subheading font-weight-regular">
-          explicar un poquito el proyecto
+          Agreguemos michis porque si:
         </p>
       </v-col>
     </v-row>
@@ -26,8 +26,8 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12">
-        <p>tabla</p>
+      <v-col cols="12" class="mb-6">
+        <h2 class="mb-2 text-center">Los michis</h2>
         <TablaGatos :content="mockgatos" />
       </v-col>
     </v-row>
@@ -49,8 +49,16 @@
       AgregarGatoForm,
       TablaGatos,
     },
+    filters: {
+      mayusculizar: (value) => {
+        if (!value) return ''
+        value = value.toString()
+        return value.toUpperCase()
+      },
+    },
     data: () => ({
       mockgatos,
+      nombreApp: 'vuecator 2000'
     }),
     methods : {
       submit(michiagregado) {
