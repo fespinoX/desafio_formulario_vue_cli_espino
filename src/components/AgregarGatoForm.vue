@@ -2,7 +2,11 @@
   <div>
     <h1 class="page-guia">Registro</h1>    
 
-    <v-form v-model="valid">
+    <v-form
+      ref="form"
+      v-model="valid"
+      lazy-validation
+    >
     <v-container>
       <v-row>
         <v-col
@@ -96,6 +100,24 @@
           >
             submit
           </v-btn>
+
+        </v-col>
+
+        <v-col
+          cols="6"
+          md="4"
+          offset=""
+          offset-md="4"
+        >
+          <v-alert
+            :value="alert"
+            color="green"
+            dark
+            type="success"
+            transition="scale-transition"
+          >
+            Agregaste un michi!
+          </v-alert>
         </v-col>
 
       </v-row>
@@ -116,13 +138,16 @@
         'Flor',
         'Otro'
       ],
+      
       valid: false,
-      nuevoMichi: '',
+
+      nuevoMichi: {},
       nombre: '',
       humano: '',
       edad: '',
       color: '',
       panza: false,
+
       textRules: [
         v => !!v || 'Por favor complete este campo',
         v => v.length >= 3 || 'Este campo debe contener al menos 3 caracteres',
@@ -132,20 +157,54 @@
       ],
       edadRules: [
         v => !!v || 'Por favor complete este campo.',
-        v => ( v && v >= 0 ) || 'La edad no uede ser menor de 0',
+        v => ( v && v >= 0 ) || 'La edad no puede ser menor a 0',
+        v => ( v && v <= 30 ) || 'La edad no puede ser mayor a 30',
       ],
       checkRules: [
         v => !!v || 'Por favor seleccione una opción',
-      ]
+      ],
+
+      alert: false,
     }),
     methods: {
       submit() {
-        if (this.valid) {
-          // this.nuevoMichi
-          console.log("agregado el michi: " + this.nuevoMichi)
+        if (this.$refs.form.validate()) {
+          // agrega la data del form a nuevoMichi
+          this.nuevoMichi.nombre = this.nombre
+          this.nuevoMichi.humano = this.humano
+          this.nuevoMichi.edad = this.edad
+          this.nuevoMichi.color = this.color
+          this.nuevoMichi.panza = this.panza
+
+          // emite nuevoMichi
           this.$emit('click', this.nuevoMichi);
+
+          // muestra la alerta
+          this.showAlert()
+
+          // vacía formulario
+          this.vaciarForm()
+          
+          // resettea la validacion
+          this.$refs.form.resetValidation()
+        } else {
+          console.log("no valida")
         }
-      }
+      },
+      showAlert() {
+        this.alert = false
+        this.alert = true
+        setTimeout(()=>{
+          this.alert=false
+        },5000)
+      },
+      vaciarForm() {
+        this.nombre = ''
+        this.humano = ''
+        this.edad = ''
+        this.color = ''
+        this.panza = ''
+      },
     }
   }
 </script>

@@ -22,13 +22,13 @@
     </v-row>
     <v-row>
       <v-col cols="12">
-        <AgregarGatoForm />
+        <AgregarGatoForm @click="submit" />
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="12">
         <p>tabla</p>
-        <TablaGatos />
+        <TablaGatos :content="mockgatos" />
       </v-col>
     </v-row>
   </v-container>
@@ -40,6 +40,9 @@
   import AgregarGatoForm from './AgregarGatoForm';
   import TablaGatos from './TablaGatos';
 
+  // Data
+  import mockgatos from "./../assets/data/mockgatos.json"
+
   export default {
     name: 'MainPage',
     components: {
@@ -47,7 +50,12 @@
       TablaGatos,
     },
     data: () => ({
-
-    })
+      mockgatos,
+    }),
+    methods : {
+      submit(nuevomichi) {
+        this.mockgatos.push(nuevomichi)
+      }
+    }
   }
 </script>
