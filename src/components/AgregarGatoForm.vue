@@ -178,6 +178,7 @@
 
           // emite nuevoMichi
           this.$emit('click', this.nuevoMichi);
+          this.nuevoMichi = {}
 
           // muestra la alerta
           this.showAlert()
@@ -194,7 +195,7 @@
       showAlert() {
         this.alert = false
         this.alert = true
-        setTimeout(()=>{
+        setTimeout(() => {
           this.alert=false
         },5000)
       },

@@ -53,8 +53,10 @@
       mockgatos,
     }),
     methods : {
-      submit(nuevomichi) {
-        this.mockgatos.push(nuevomichi)
+      submit(michiagregado) {
+        let listaGatos = this.mockgatos
+        listaGatos.push(michiagregado)
+        this.mockgatos = listaGatos
       }
     }
   }
