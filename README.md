@@ -23,11 +23,22 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### Github repo
+
+## Github repo
 https://github.com/fespinoX/desafio_formulario_vue_cli_espino
 
-### Info entrega
+
+### Branch
+
+Branch name is: clase_12_vuex
+
+
+## Info entrega
+
 Nombre: Florencia Espino
+
 Comision: 23345
-Clase: 8
+
+Clase: 12
+
 Tutor: Diego Mafferra
