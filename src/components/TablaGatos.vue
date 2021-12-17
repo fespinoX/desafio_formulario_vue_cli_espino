@@ -5,6 +5,7 @@
       :headers="tablaheaders"
       :items="michis"
       class="elevation-1"
+      :loading="loadingMichis"
     >
       <template
         v-slot:body="{ items }"
@@ -53,8 +54,9 @@
 </template>
 
 <script>
-  import axios from "axios"
 
+  import { mapState } from "vuex"
+  
   // Data
   import tablaheaders from "./../assets/data/tablaheaders.json"
 
@@ -67,29 +69,19 @@
     },
     data: () => ({
       tablaheaders,
-      michis: []
     }),
 
-    methods: {
-
-      levantarMichis() {
-        console.log("levantndo michis....")
-        axios
-          .get('https://61b145c33c954f001722a877.mockapi.io/michis')
-          .then(response => (this.info = response))
-          .then(data => {
-            this.michis = data.data
-            console.log("michis levantados de la DB")
-          })
-          .catch((err) => {console.error(`${err}`)})
-      },
+    computed : {
+      ...mapState({
+        michis: state => state.michis,
+        loadingMichis: state => state.loadingMichis,
+      }),
 
     },
 
     mounted() {
-      console.log("buenas buenas")
       this.$nextTick(function () {
-        this.levantarMichis()
+
       })
 
     }  

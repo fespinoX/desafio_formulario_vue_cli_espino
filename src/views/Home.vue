@@ -65,6 +65,9 @@
         //this.mockgatos = listaGatos
         console.log(michiagregado)
       }
+    },
+    computed: {
+
     }
   }
 </script>
