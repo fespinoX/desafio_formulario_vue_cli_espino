@@ -28,7 +28,7 @@
 
       <v-row>
         <v-col cols="12">
-          <AgregarGatoForm @click="submit" />
+          <AgregarGatoForm />
         </v-col>
       </v-row>
 
@@ -41,9 +41,6 @@
   // Components
   import NavBar from './../components/NavBar.vue';
   import AgregarGatoForm from './../components/AgregarGatoForm.vue';
-  
-  // Data
-  import mockgatos from "./../assets/data/mockgatos.json"
 
   export default {
     name: 'Home',
@@ -59,14 +56,14 @@
       },
     },
     data: () => ({
-      mockgatos,
       nombreApp: 'vuecator 2000'
     }),
     methods : {
       submit(michiagregado) {
-        let listaGatos = this.mockgatos
-        listaGatos.push(michiagregado)
-        this.mockgatos = listaGatos
+        //let listaGatos = this.mockgatos
+        //listaGatos.push(michiagregado)
+        //this.mockgatos = listaGatos
+        console.log(michiagregado)
       }
     }
   }
