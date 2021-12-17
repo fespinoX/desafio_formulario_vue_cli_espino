@@ -1,4 +1,5 @@
 <template>
+  <div>
     <v-data-table
         :headers="tablaheaders"
         class="elevation-1"
@@ -7,6 +8,7 @@
     >
 
     </v-data-table>
+  </div>
 </template>
 
 <script>

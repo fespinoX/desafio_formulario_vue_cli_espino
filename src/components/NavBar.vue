@@ -6,17 +6,13 @@
   >
     <v-spacer></v-spacer>
     <router-link to="/">
-      <div
-        class="mr-4"
-      >
+      <div>
         <v-icon>mdi-plus-box-multiple</v-icon>
         <span>Agregar michi</span>
       </div>
     </router-link>  
       <router-link to="/michis">
-        <div
-          class="mr-4"
-        >      
+        <div>      
           <v-icon>mdi-format-list-bulleted</v-icon>
           <span>Todos los michis</span>
         </div>
@@ -47,10 +43,14 @@ export default {
 <style lang="sass" scoped>
   
   a
+    display: inline-block
     color: white!important
     text-decoration: none
 
-  .user-card
-    padding: 10px 20px
+    span
+      margin-left: 5px
+    
+    &:first-of-type
+      margin-right: 20px
 
 </style>

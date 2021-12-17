@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <v-form
       ref="form"
       v-model="valid"
@@ -11,7 +10,6 @@
         <v-col
           cols="12"
           md="6"
-          offset-md="3"
         >
           <v-text-field
             v-model="nombre"
@@ -25,7 +23,6 @@
         <v-col
           cols="12"
           md="6"
-          offset-md="3"
         >
           <v-select
             :items="listahumanos"
@@ -38,7 +35,6 @@
         <v-col
           cols="12"
           md="6"
-          offset-md="3"
         >
           <v-text-field
             v-model="edad"
@@ -53,7 +49,6 @@
         <v-col
           cols="12"
           md="6"
-          offset-md="3"
         >
           <v-text-field
             v-model="color"
@@ -67,7 +62,6 @@
         <v-col
           cols="12"
           md="6"
-          offset-md="3"
         >
           <p>Se deja rascar la panza?</p>
           <v-checkbox
@@ -89,8 +83,6 @@
 
         <v-col
           cols="12"
-          md="6"
-          offset-md="3"
         >
           <v-btn
             class="form-submit mt-4"
@@ -103,10 +95,7 @@
         </v-col>
 
         <v-col
-          cols="6"
-          md="4"
-          offset=""
-          offset-md="4"
+          cols="12"
         >
           <v-alert
             :value="alert"
