@@ -102,7 +102,7 @@
             @click="submit"
             color="orange"
           >
-            submit
+            Agregar
           </v-btn>
 
         </v-col>
