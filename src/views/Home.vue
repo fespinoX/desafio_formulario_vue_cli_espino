@@ -55,12 +55,6 @@
       nombreApp: 'vuecator 2000'
     }),
     methods : {
-      submit(michiagregado) {
-        //let listaGatos = this.mockgatos
-        //listaGatos.push(michiagregado)
-        //this.mockgatos = listaGatos
-        console.log(michiagregado)
-      }
     },
     computed: {
 
