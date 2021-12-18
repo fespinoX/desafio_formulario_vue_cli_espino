@@ -3,7 +3,7 @@
     <NavBar />
     <v-container>
       <v-row class="text-center mt-6">
-        <v-col cols="12">
+        <v-col cols="12 mt-6">
           <v-img
             :src="require('../assets/cator.png')"
             class="my-3"
