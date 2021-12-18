@@ -2,7 +2,7 @@
   <div>
     <NavBar />
     <v-container>
-      <v-row class="text-center">
+      <v-row class="text-center mt-6">
         <v-col cols="12">
           <v-img
             :src="require('../assets/cator.png')"
@@ -19,10 +19,6 @@
           <h1 class="display-2 font-weight-bold mb-3">
             {{ nombreApp | mayusculizar(nombreApp) }}
           </h1>
-
-          <p class="subheading font-weight-regular">
-            Agreguemos michis porque si:
-          </p>
         </v-col>
       </v-row>
 

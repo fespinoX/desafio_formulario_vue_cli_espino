@@ -1,10 +1,17 @@
 <template>
-  <div>
+  <div
+    class="mt-6"
+  >
+    <h2
+      class="mb-6 text-center"
+    >
+      Estos son todos los michis (por ahora...)
+    </h2>
 
     <v-data-table
       :headers="tablaheaders"
       :items="michis"
-      class="elevation-1"
+      class="elevation-1 mt-2"
       :loading="loadingMichis"
     >
       <template
@@ -20,7 +27,7 @@
             <td class="text-left">
               {{ item.edad }}
               <span
-                v-if="item.edad === 1"
+                v-if="item.edad === '1'"
               >
                 año
               </span>
@@ -79,12 +86,9 @@
 
     },
 
-    mounted() {
-      this.$nextTick(function () {
-
-      })
-
-    }  
+    watch : {
+      
+    }
     
     
   }

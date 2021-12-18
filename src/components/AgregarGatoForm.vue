@@ -1,5 +1,10 @@
 <template>
   <div>
+    <h2
+      class="mb-4 text-center"
+    >
+      Agreguemos un michi
+    </h2>
     <v-form
       ref="form"
       v-model="valid"
@@ -10,6 +15,7 @@
         <v-col
           cols="12"
           md="6"
+          offset-md="3"
         >
           <v-text-field
             v-model="nombre"
@@ -23,6 +29,7 @@
         <v-col
           cols="12"
           md="6"
+          offset-md="3"
         >
           <v-select
             :items="listahumanos"
@@ -35,6 +42,7 @@
         <v-col
           cols="12"
           md="6"
+          offset-md="3"
         >
           <v-text-field
             v-model="edad"
@@ -49,6 +57,7 @@
         <v-col
           cols="12"
           md="6"
+          offset-md="3"
         >
           <v-text-field
             v-model="color"
@@ -62,6 +71,7 @@
         <v-col
           cols="12"
           md="6"
+          offset-md="3"
         >
           <p>Se deja rascar la panza?</p>
           <v-checkbox
@@ -83,6 +93,9 @@
 
         <v-col
           cols="12"
+          md="6"
+          offset-md="3"
+          class="text-center"
         >
           <v-btn
             class="form-submit mt-4"
@@ -115,6 +128,9 @@
 </template>
 
 <script>
+  // import axios from "axios"
+  // import vuex from "vuex"
+
   export default {
     name: 'AgregarGatoForm',
 
@@ -164,9 +180,9 @@
           this.nuevoMichi.color = this.color
           this.nuevoMichi.panza = this.panza
 
-          // emite nuevoMichi
-          this.$emit('click', this.nuevoMichi);
-          this.nuevoMichi = {}
+
+          // agrega el nuevo michi
+          this.agregarMichiNuevo(this.nuevoMichi)
 
           // muestra la alerta
           this.showAlert()
@@ -180,6 +196,15 @@
           console.log("no valida")
         }
       },
+
+      agregarMichiNuevo(michinuevo) {
+
+        this.$store.dispatch("agregarMichi", michinuevo)
+
+        console.log("michi nuevo aca es:", michinuevo)
+
+      },
+
       showAlert() {
         this.alert = false
         this.alert = true
@@ -187,6 +212,7 @@
           this.alert=false
         },5000)
       },
+
       vaciarForm() {
         this.nombre = ''
         this.humano = ''
@@ -194,6 +220,7 @@
         this.color = ''
         this.panza = ''
       },
+
     }
   }
 </script>

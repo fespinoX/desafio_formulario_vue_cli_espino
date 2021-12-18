@@ -4,6 +4,7 @@
     color="primary"
     dark
   >
+    <h1>Vuecator 2000</h1>
     <v-spacer></v-spacer>
     <router-link to="/">
       <div>
@@ -42,6 +43,9 @@ export default {
 
 <style lang="sass" scoped>
   
+  h1
+    font-size: 1.5rem
+
   a
     display: inline-block
     color: white!important
